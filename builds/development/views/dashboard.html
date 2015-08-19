@@ -1,0 +1,38 @@
+<div class="page-header">
+	<h1 class="onBackground">Current Discussion Room</h1>
+</div>
+<div class="jumbotron" ng-show="currentUser">
+  	<div class="row">
+	  <div class="col-xs-4">
+	    <input ng-model="restaurant.name" type="text" class="form-control" placeholder="Restaurant Name">
+	  </div>
+	  <div class="col-xs-8">
+	    <input ng-model="restaurant.url" type="text" class="form-control end-form-input" placeholder="Restaurant URL">
+	  </div>
+	</div>
+	<div class="row">
+		<jp-ng-bs-animated-button ng-click="addRestaurant()" class="btn btn-success" is-submitting="isSubmitting" result="result" options="options" type="submit" name="submit" id="submit"></jp-ng-bs-animated-button>
+	</div>
+</div>
+<div class="jumbotron" ng-hide="currentUser">
+	<div class="row">
+		<p class="warning" style="text-align:center;">You need to login in order to add a restaurant</p>
+	</div>
+</div>
+		<!-- ng-repeat="person in allUsers | orderBy: order" -->
+<div class="panelLists">
+	<div class="panel panel-success" ng-repeat="res in allRes | orderBy: '-listVote.length'">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="pull-left"><h3 class="panel-title text-primary">{{res.name}}</h3></div>
+				<div class="pull-right">
+					<i ng-click="voteUp(res)" ng-if="notYetVote(res)" class="vote fa fa-thumbs-up fa-2x"></i>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+		  <a class="text-warning vote" href="{{res.url}}" target="_blank">{{res.url}}</a>
+		  <p class="text-success">{{res.listVote.length}} vote(s): {{res.listVote}} </p>
+		</div>
+	</div>
+</div>

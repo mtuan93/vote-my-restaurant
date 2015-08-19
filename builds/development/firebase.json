@@ -1,0 +1,9 @@
+{
+  "firebase": "join-my-party",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

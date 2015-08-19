@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="A website that let everyone vote for what restaurant to eat">
+    <meta name="author" content="Tuan Nguyen">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-full-background-image.css">
+    <link rel="stylesheet" href="bower_components/ng-bs-animated-button/ng-bs-animated-button.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Libraries -->
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/lib/angular/angular-route.min.js"></script>
+    <script src="js/lib/angular/angular-animate.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.1.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+    <!-- JS supports -->
+    <script src="bower_components/ng-bs-animated-button/ng-bs-animated-button.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/Registration.js"></script>
+    <script src="js/controllers/Dashboard.js"></script>
+    <script src="js/services/authentication.js"></script>
+    <script src="js/directives/autofocus.js"></script>
+    <script src="js/directives/showfocus.js"></script>
+    <!--webfonts-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Amaranth" />
+    <!--//webfonts-->
+    <title>Let's Vote For What You Eat</title>
+  </head>
+  <body>
+    <div id="color-overlay"></div>
+        <div ng-include="'views/nav.html'"></div>
+    <div class="container">
+        <main class="demo" ng-view></main>
+        <footer class="footer">
+            <p class="onBackground"><i class="fa fa-copyright"></i> <a href="https://www.cs.drexel.edu/~thn42" target="blank" class="actionBtn">Tuan Nguyen</a></p>
+        </footer>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<p class="navbar-brand text-muted" ng-hide="currentUser">Let's vote for what you eat</p>
+			<p class="navbar-brand text-muted" ng-show="currentUser">Hi {{currentUser.name}} 
+			<span ng-show="currentUser" class="logoutBtn" ng-click="logout()">( Logout <i class="fa fa-lock"></i> )</span></p>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li role="presentation" ng-class="{active : path==='/login'}"><a ng-href="#/login">Login</a></li>
+				<li role="presentation" ng-class="{active : path==='/register'}"><a ng-href="#/register">Register</a></li>
+				<li role="presentation" ng-class="{active : path==='/dashboard'}"><a ng-href="#/dashboard">Dashboard</a></li>
+			</ul>
+		</div><!--/.nav-collapse -->
+	</div>
+</nav>
